@@ -1,182 +1,89 @@
 
+
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        
-        body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.content1,.content2,.content3{
-    background-color: #999999;
-}
-.span{
-    color: white;
-    font-weight: bold;
-}
-#span1{
-    background-color: #D59897;
-}
-#span2{
-    background-color: #C14543;
-}
-#span3{
-    background-color: #E5D197;
-}
-
-@media screen and (min-width:992px){
-.main-container{
-    width: 100%;
-    margin: auto;
-}
-.main-heading{
-    text-align: center;
-}
-.content-main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
-    flex-wrap: nowrap;
-}
-.content1,.content2,.content3{
-    border: 2px solid #060606;
-    width: 30%;
-    margin: 10px;
-    padding: 10px;
-    /* float: left; */
-}
-.span{
-    border: 2px solid #060606;
-    float: right;
-    position: relative;
-    top: -12px;
-    right: -12px;
-    padding: 3px;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-}
-
-@media only screen and (min-width:768px) and (max-width:991px){
-    .main-container{
-        width: 100%;
-        margin: auto;
-    }
-    .main-heading{
-        text-align: center;
-    }
-    .content-main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-        padding-right: 10px;
-        flex-wrap: wrap;
-    }
-    .content1,.content2{
-        border: 2px solid #060606;
-        width: 44%;
-        margin: 10px;
-        padding: 10px;
-    }
-    .content3{
-        border: 2px solid #060606;
-        width: 92.6%;
-        margin: 10px;
-        padding: 10px;
-    }
-    .span{
-        border: 2px solid #060606;
-        float: right;
-        position: relative;
-        top: -12px;
-        right: -12px;
-        padding: 3px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-}
-
-@media only screen and (max-width:767px){
-    .main-container{
-        width: 100%;
-        margin: auto;
-    }
-    .main-heading{
-        text-align: center;
-    }
-    .content-main{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 10px;
-        padding-right: 10px;
-        flex-wrap: wrap;
-    }
-    .content1,.content2{
-        border: 2px solid #060606;
-        width: 100%;
-        margin: 10px;
-        padding: 10px;
-        /* float: left; */
-    }
-    .content3{
-        border: 2px solid #060606;
-        width: 100%;
-        margin: 10px;
-        padding: 10px;
-        /* float: left; */
-    }
-    .span{
-        border: 2px solid #060606;
-        float: right;
-        position: relative;
-        top: -12px;
-        right: -12px;
-        padding: 3px;
-        padding-left: 25px;
-        padding-right: 25px;
-    }
-}
-    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+	
+	<title>Module 3 Solution</title>
 </head>
-
 <body>
-    <div class="main-container">
-        <div class="main-heading">
-            <h1>Our menu</h1>
-        </div>
-        <div class="content-main">
-            <div class="content1">
-                <span class="span" id="span1">Chicken</span>
-                <br>
-                <p>lorem ipsum dolar sit omet, concectutre adipiscing elit, sed doeiusmod tempor
-                    incididunt ut labour et labore dolore alique. Ut enim ad minim vaniam, quis
-                    nostured exertitation uttamco laboris nisi ut aliquip ex eo commondo consiquat</p>
-            </div>
-            <div class="content2">
-                <span class="span" id="span2">Beef</span>
-                <br>
-                <p>lorem ipsum dolar sit omet, concectutre adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labour et labore dolore alique. Ut enim ad minim vaniam, quis
-                    nostured exertitation uttamco laboris nisi ut aliquip ex eo commondo consiquat</p>
-            </div>
-            <div class="content3">
-                <span class="span" id="span3">Sushi</span>
-                <br>
-                <p>lorem ipsum dolar sit omet, concectutre adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labour et labore dolore alique. Ut enim ad minim vaniam, quis
-                    nostured exertitation uttamco laboris nisi ut aliquip ex eo commondo consiquat</p>
-            </div>
-        </div>
-    </div>
-</body>
+    <header class="nav-header">
+    <nav id="header-nav" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <p class="nav-brand">Food, LLC</p>
+          </div>
 
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="true">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
+        <div id="collapsable-nav" class="collapse navbar-collapse">
+           <ul id="nav-list" class="nav navbar-nav navbar-right visible-xs">
+            <li class="text-center">
+              <a href="#chicken-div"><p class="item">Chicken</p></a>
+              <hr class="visible-xs">
+            </li>            
+            <li class="text-center beef-item">
+              <a href="#beef-div"><p class="item">Beef</p></a>
+              <hr class="visible-xs">
+            </li>
+            <li class="text-center sushi-item">
+              <a href="#sushi-div"><p class="item">Sushi</p></a>
+            </li>
+          </ul> 
+        </div>
+      </div>
+    </nav>
+  	</header>
+
+	<h1 class="text-center">Our Menu</h1>
+
+	<div class="row container container-fluid">
+	<div class="col-md-12 col-sm-12 col-xs-12" id="chicken-div">
+		<section>
+		<div id="chicken">
+			Chicken
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac.
+		</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12" id="beef-div">
+		<section>
+		<div id="beef">
+			Beef
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac.
+		</p>
+		</section>
+	</div>
+	<div class="col-md-12 col-sm-12 col-xs-12" id="sushi-div">
+		<section>
+		<div id="sushi">
+			Sushi
+		</div>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique ipsum sit amet nunc posuere, at dictum massa fermentum. Sed tempor turpis quis dui pharetra, eu suscipit elit cursus. Praesent sed libero turpis. Aliquam varius elit mauris, vestibulum laoreet leo rhoncus ac. Fusce at facilisis velit. Vivamus facilisis semper risus, et efficitur justo suscipit ac.
+		</p>
+		</section>
+	</div>
+	</div>
+
+	<script src="css/jquery-2.1.4.min.js"></script>
+	<script src="css/bootstrap.min.js"></script>
+  	<script src="js/script.js"></script>
+</body>
 </html>
